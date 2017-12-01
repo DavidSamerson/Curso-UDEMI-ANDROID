@@ -14,4 +14,12 @@ export class Contact {
     console.log('ionViewDidLoad Contact');
   }
 
+  pushPage(): void {
+    this.navCtrl.push(Contact);
+  }
+
+  popPage(): void {
+    this.navCtrl.pop();
+  }
+
 }
