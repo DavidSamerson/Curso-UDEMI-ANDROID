@@ -17,7 +17,9 @@ export class HomePage {
     this.navCtrl.push(Contact);
   }
 
- 
+  setRoot():void {
+    this.navCtrl.setRoot(Contact);
+  }
 
 }
 
