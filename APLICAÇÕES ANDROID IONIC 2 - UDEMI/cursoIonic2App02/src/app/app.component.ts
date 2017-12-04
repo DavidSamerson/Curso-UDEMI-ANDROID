@@ -6,14 +6,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { Contact } from '../pages/contact/contact';
+//import { Contact } from '../pages/contact/contact';
 @Component({
   templateUrl: 'app.html'
 })
 
 export class MyApp {
 
-  @ViewChild(Nav) nav : Nav;
+  //@ViewChild(Nav) nav : Nav;
 
   rootPage:any = HomePage;
 

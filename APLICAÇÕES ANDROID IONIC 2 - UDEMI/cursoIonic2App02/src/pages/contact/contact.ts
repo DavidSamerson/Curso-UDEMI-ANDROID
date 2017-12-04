@@ -10,8 +10,12 @@ export class Contact {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  //ionic carrega e chama isso automaticamente.
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Contact');
+    console.log(this.navParams);
+    console.log(this.navParams.get('type'));
+    this.navParams.data.type;
+    this.navParams.data['message'](); 
   }
 
   pushPage(): void {
