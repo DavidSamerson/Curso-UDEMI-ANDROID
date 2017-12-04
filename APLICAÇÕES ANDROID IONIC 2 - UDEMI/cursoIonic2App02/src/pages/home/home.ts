@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Contact } from './../contact/contact';
+import { LifecycleEvents } from '../lifecycle-events/lifecycle-events';
 
 
 @Component({
@@ -28,6 +29,10 @@ export class HomePage {
     this.navCtrl.setRoot(Contact,{
       type:'setRoot'
     });
+  }
+
+  lifecycle(): void {
+    this.navCtrl.push(LifecycleEvents);
   }
 
 }
