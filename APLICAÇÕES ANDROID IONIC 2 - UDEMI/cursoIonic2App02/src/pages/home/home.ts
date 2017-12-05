@@ -32,9 +32,12 @@ export class HomePage {
   }
 
   lifecycle(): void {
-    this.navCtrl.push(LifecycleEvents);
+    this.navCtrl.push(LifecycleEvents)
+      .then(() => {
+        console.log('Page Pushed!');
+    }).catch(error => {
+        console.log('Erro ao acessar a página, acesso negado', error);
+    });
   }
-
+ 
 }
-
-
