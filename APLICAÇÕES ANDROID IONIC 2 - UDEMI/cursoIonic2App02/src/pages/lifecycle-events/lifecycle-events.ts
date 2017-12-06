@@ -13,9 +13,31 @@ export class LifecycleEvents {
   }
 
   //guarda de entrada da pagina
-  ionViewCanEnter(): boolean {
+  /*ionViewCanEnter(): boolean {
     console.log('01 ionViewCanEnter Called');
     return true;
+  }*/
+
+  ionViewCanEnter(): Promise<any> {
+
+    return new Promise((resolve, reject) => {
+
+      console.log('aguardando 2 seguntos...');
+
+      setTimeout(() => {
+
+      let number = Math.round(Math.random()*100);
+
+      if(number%2==0){
+        resolve();
+        console.log('${number} - Autorizado');
+      } else {
+        reject();
+        console.log('${number} - Não Autorizado');
+      }
+      },2000);
+
+    });
   }
 
   //assim que entra, tá carregando ela, não exibida
