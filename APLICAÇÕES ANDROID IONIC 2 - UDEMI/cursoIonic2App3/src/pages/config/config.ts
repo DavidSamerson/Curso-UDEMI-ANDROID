@@ -1,24 +1,27 @@
 import { Component } from '@angular/core';
-$IMPORTSTATEMENT
+import { Config, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Config page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-$IONICPAGE
+
 @Component({
   selector: 'page-config',
   templateUrl: 'config.html',
 })
-export class Config {
+export class ConfigPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public config: Config,
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    ) {
+  
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Config');
+    console.log('ionViewDidLoad Config'); 
+  }
+
+  configTest() : void {
+    console.log(this.config.getModeConfig('ios'))
   }
 
 }
