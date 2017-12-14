@@ -21,7 +21,7 @@ export class ConfigPage {
   }
 
   configTest() : void {
-    console.log(this.config.getModeConfig('ios'))
+    console.log(this.config.getModeConfig('ios'));
   }
 
 }
