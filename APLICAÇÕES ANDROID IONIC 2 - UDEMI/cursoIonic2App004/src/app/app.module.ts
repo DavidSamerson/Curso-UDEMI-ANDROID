@@ -5,11 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+import { About } from './../pages/about/about';
 import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
+    About,
     HomePage
   ],
   imports: [
@@ -19,6 +21,7 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    About,
     HomePage
   ],
   providers: [
